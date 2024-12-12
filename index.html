@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon $1000 Gift Card</title>
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffcc66, #ff9966);
+            color: #333;
+        }
+
+        /* Container styling */
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Header menu styling */
+        .menu-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .menu-button div {
+            width: 30px;
+            height: 4px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+        /* Gift Card Image */
+        .gift-card {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Title styling */
+        .title {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #ff5733;
+        }
+
+        /* Claim button */
+        .claim-button {
+            display: inline-block;
+            background: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 20px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .claim-button:hover {
+            background: #ff3300;
+            transform: scale(1.1);
+        }
+
+        /* Offer details */
+        .offer-details {
+            padding: 15px;
+            text-align: left;
+            background: #f9f9f9;
+        }
+
+        /* Review Section */
+        .reviews {
+            padding: 15px;
+        }
+
+        .reviews h3 {
+            margin-bottom: 10px;
+        }
+
+        .reviews p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        /* Popup styling */
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffcc66;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            animation: bounce 2s infinite;
+        }
+
+        /* Keyframes for bounce effect */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Responsive layout */
+        @media (max-width: 500px) {
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Button -->
+    <div class="menu-button" onclick="window.location.href='https://go4affm.com/c/?p=41639&o=20854&s1=anowar'">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Gift Card Image -->
+        <img src="https://i.ibb.co/HXBVDfP/aecbb58bfded.png" alt="Amazon Gift Card" class="gift-card">
+        <!-- Title -->
+        <h1 class="title">Get Your $1000 Amazon Gift Card!</h1>
+        <!-- Countdown -->
+        <div class="countdown" id="countdown">Offer ends in: 00:00:00</div>
+        <!-- Claim Button -->
+        <a href="https://go4affm.com/c/?p=41639&o=20854&s1=anowar" class="claim-button">Claim Now</a>
+        <!-- Offer Details -->
+        <div class="offer-details">
+            <h2>About this Offer</h2>
+            <p>Enjoy exclusive access to a $1000 Amazon Gift Card, valid for a limited time only. Secure your card now before the offer expires!</p>
+        </div>
+        <!-- Reviews -->
+        <div class="reviews">
+            <h3>User Reviews</h3>
+            <p>"This gift card helped me buy all my essentials. Totally worth it!" - John D.</p>
+            <p>"I couldn't believe it was real, but it worked perfectly!" - Sarah L.</p>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">4578 people have already claimed this offer!</div>
+
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            const endTime = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
+            const countdownElement = document.getElementById('countdown');
+
+            const interval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `Offer ends in: ${hours}:${minutes}:${seconds}`;
+
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "Offer expired!";
+                }
+            }, 1000);
+        }
+
+        startCountdown();
+    </script>
+</body>
+</html>
